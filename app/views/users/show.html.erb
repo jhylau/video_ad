@@ -37,7 +37,9 @@
         <table>
           <tr>
             <thead>
-              <th>Stock Ticker</th>
+              <th>Ticker Symbol</th>
+              <th>Quantity</th>
+              <th>Purchase Price</th>
               <th>Current Value</th>
               <th>Unrealized Gain/Loss</th>
               <th>Actions</th>
@@ -46,11 +48,13 @@
           <% @holdings.each do |holding| %>
             <tr>
               <td><%= holding.ticker %></td>
+              <td></td>
               <td>
                 <span class="radius secondary label">
                   <%= holding.avg_sell_price %>
                 </span>
               </td>
+              <td></td>
               <td></td>
               <td>
                 <% if current_user == @user %>

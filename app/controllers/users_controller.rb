@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @holdings = Holding.order('avg_buy_price DESC')
+    @holdings = Holding.by_user(current_user)
   end
 
   private
