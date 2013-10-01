@@ -1,0 +1,36 @@
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><%= link_to 'Cash Cow', root_path %></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="divider"></li>
+      <li><%= link_to 'Research', root_path %></li>
+      <li class="divider"></li>
+      <li><%= link_to 'Top Players', users_path %></a></li>
+      <li class="divider"></li>
+    </ul>
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <% if !current_user %>
+        <li><%= link_to 'Sign up', new_user_registration_path %></a></li>
+        <li class="divider"></li>
+        <li><%= link_to 'Sign in', user_session_path %></a></li>
+      <% else %>
+        <li><%= link_to 'My Account', user_path(current_user) %></a></li>
+        <li class="divider"></li>
+        <li><%= link_to 'Sign out', destroy_user_session_path, method: 'delete' %></a></li>
+      <% end %>
+      <li>&nbsp;</li>
+    </ul>
+  </section>
+</nav>

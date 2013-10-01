@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  avg_buy_price: 9.99
+  avg_sell_price: 9.99
+  quantity: 1
+  ticker: MyString
+
+two:
+  avg_buy_price: 9.99
+  avg_sell_price: 9.99
+  quantity: 1
+  ticker: MyString

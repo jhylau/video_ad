@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  password: MyString
+  cash_balance: 9.99
+
+two:
+  email: MyString
+  password: MyString
+  cash_balance: 9.99

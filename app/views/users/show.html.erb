@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="large-4 columns shadow1">
+    <!-- Row -->
+    <div class="row padt20">
+      <div class="large-4 columns">
+          <div class="th"><%= image_tag avatar_url(@user) %></div>
+      </div>
+      <div class="large-8 columns">
+        <h4><%= @user.username %></h4>
+      </div>
+    </div>
+    <div class="row"><div class="large-12 columns">&nbsp;</div></div>
+    <div class="row">
+      <div class="large-12 columns">
+        <table>
+          <thead>
+            <tr>
+              <th>net worth</th>
+              <th>portfolio value</th>
+              <th>cash balance</th>
+            <tr>
+          </thead>
+          <tr>
+            <td><h5></h4></td>
+            <td><h5></h4></td>
+            <td><h5><%= @user.cash_balance %></h5></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="large-8 columns">
+    <div class="row">
+      <div class="large-11 large-offset-1 columns shadow1">
+        <h2>My Portfolio</h2>
+        <hr />
+        <table>
+          <tr>
+            <thead>
+              <th>Stock Ticker</th>
+              <th>Current Value</th>
+              <th>Unrealized Gain/Loss</th>
+              <th>Actions</th>
+            </thead>
+          </tr>
+          <% @holdings.each do |holding| %>
+            <tr>
+              <td><%= holding.ticker %></td>
+              <td>
+                <span class="radius secondary label">
+                  <%= holding.avg_sell_price %>
+                </span>
+              </td>
+              <td></td>
+              <td>
+                <% if current_user == @user %>
+                  <%= form_for holding do |f| %>
+                    <br />
+                    <br />
+                    <%= f.submit 'Sell', class: 'small button' %>
+                  <% end %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+

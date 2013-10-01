@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  open_at: 2013-09-30 21:23:22
+  open_price: 9.99
+  close_at: 2013-09-30 21:23:22
+  close_price: 9.99
+  user_id: 1
+  stock_id: 1
+
+two:
+  open_at: 2013-09-30 21:23:22
+  open_price: 9.99
+  close_at: 2013-09-30 21:23:22
+  close_price: 9.99
+  user_id: 1
+  stock_id: 1
